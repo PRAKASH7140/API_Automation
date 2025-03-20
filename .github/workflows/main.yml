@@ -26,11 +26,13 @@ jobs:
 
       - name: Install Backend Dependencies
         run: |
-          cd bookstore  # Ensure we're inside the backend directory
+          cd bookstore  
+          cd bookstore
           pip install -r requirements.txt
 
       - name: Start FastAPI Backend
         run: |
+          cd bookstore
           cd bookstore
           nohup uvicorn main:app --host 127.0.0.1 --port 8000 &  
         continue-on-error: false  # Ensure the backend must start successfully
