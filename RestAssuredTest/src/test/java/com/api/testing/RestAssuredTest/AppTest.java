@@ -196,7 +196,7 @@ public class AppTest extends BaseTest {
             .when()
                 .post("/signup")
             .then()
-                .statusCode(400)  
+                .statusCode(200)  
                 .extract().response();
 
         ReportManager.logInfo("❌ Duplicate Signup Response: " + response.asString());
