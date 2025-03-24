@@ -39,7 +39,7 @@ public class AppTest extends BaseTest {
     @Test(priority = 1)
     public void testUserSignup() {
         JSONObject request = new JSONObject();
-        request.put("email", "dummy1@example.com");
+        request.put("email", "dummy2@example.com");
         request.put("password", "dummy123");
 
         Response response = given()
@@ -57,7 +57,7 @@ public class AppTest extends BaseTest {
     @Test(priority = 2)
     public void testUserLogin() {
         JSONObject request = new JSONObject();
-        request.put("email", "dummy1@example.com");
+        request.put("email", "dummy2@example.com");
         request.put("password", "dummy123");
 
         Response response = given()
@@ -187,7 +187,7 @@ public class AppTest extends BaseTest {
     @Test(priority = 9)
     public void testSignupWithExistingEmail() {
         JSONObject request = new JSONObject();
-        request.put("email", "dummy32@example.com");
+        request.put("email", "dummy2@example.com");
         request.put("password", "dummy123");
 
         Response response = given()
@@ -205,7 +205,7 @@ public class AppTest extends BaseTest {
     @Test(priority = 10)
     public void testLoginWithIncorrectPassword() {
         JSONObject request = new JSONObject();
-        request.put("email", "dummy32@example.com");
+        request.put("email", "dummy2@example.com");
         request.put("password", "wrongpassword");
 
         Response response = given()
